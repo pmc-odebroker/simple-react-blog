@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import PostItem from './PostItem'
 
-import Thumbnail1 from '../images/pexels-ebrart-19215719.jpg'
-import Thumbnail2 from '../images/pexels-gantas-vaičiulėnas-4323407.jpg'
-import Thumbnail3 from '../images/pexels-sherman-trotz-19298507.jpg'
-import Thumbnail4 from '../images/pexels-sydney-sang-11199156.jpg'
+import Thumbnail1 from '../images/avatar3.png'
+import Thumbnail2 from '../images/picture2.jpg'
+import Thumbnail3 from '../images/picture3.jpg'
+import Thumbnail4 from '../images/picture4.jpg'
 
 const DEMO_POSTS = [
   {
@@ -44,11 +44,15 @@ const DEMO_POSTS = [
 const Posts = () => {
   const [posts, setPosts] = useState(DEMO_POSTS)
   return (
-   <section className="posts">
-    {
-    posts.map((id, thumbnail, category, title, description, author_id) => <PostItem key ={id} thumbnail={thumbnail} category={category} title={title} description={description} author_id={author_id} />)
-    }
+   
+    <section className="posts">
+      <div className="container posts__container">
+      {
+      posts.map(({id, thumbnail, category, title, description, author_id}) => <PostItem key ={id} thumbnail={thumbnail} category={category} title={title} description={description} author_id={author_id} />)
+      }
+      </div>
    </section>
+  
   )
 }
 

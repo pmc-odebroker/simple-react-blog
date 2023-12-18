@@ -16,7 +16,7 @@ function Header() {
                 <li><Link to={ '/create' }>Create Post</Link></li>
                 <li><Link to={ '/authors' }>Author</Link></li>
                 <li><Link to={ '/logout' }>Logout</Link></li>
-                <button className="nav_toggle-btn">
+                <button className="nav__toggle-btn">
                     <AiOutlineClose />
                 </button>
             </ul>
